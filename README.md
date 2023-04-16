@@ -179,5 +179,5 @@ Of course if you want better results you need to tweak the prompts but this is p
 This is not the best example use but generaly the trigger word is always there, also the reason why i filtered masterpiece, highres, 1girl because I already have it on my prompts.
 
 # improving
-This script was duct taped using chatgpt as my knowledge in python or NULL I tried to borrow the code from sd-webui-additional-networks to be able to standalone parse the safetensors files but unfortunately I met some walls running the script external.
+This script was duct taped using chatgpt as my knowledge in python is NULL I tried to borrow the code from sd-webui-additional-networks to be able to standalone parse the safetensors files but unfortunately I met some walls running the script externaly.
 If anyone willing to improve it feel free to do so, would be even better to make this into an extension.
