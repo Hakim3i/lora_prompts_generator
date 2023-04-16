@@ -1,14 +1,14 @@
-# lora_tag_generator
-This quick python script will read json meta data found in the current working dir and generate a prompt to use the lora.
+# lora_prompts_generator
+I got tired for writing a prompts for every lora file so I made this quick python script will read json metadata found in the current working dir and generate a prompt to use the lora.
 
 # feature
-- Will sort the tags accroding to their number of time used during the training
+- Will sort the tags accroding to their number of time used during the training (usually trigger word will come first)
 - Will pick top 15 tags can be changed in the script
 - Will use the lora with 0.5 weight by default can be modified
-- Will ignore any key that have the word in ignored_words vector
+- Will ignore any key that have the word in ignored_words vector (can be changed)
 - Will generate output.json file containing all the lora names and the top 15 by default
 - Will create a txt file that contain prompts it can be either imported in automatic1111 prompt from file or can be used with dynamic prompts
-- Certain lora have multiple uses so it will generate as many prompt as that lora can be used.
+- Certain lora have multiple uses so it will generate as many prompt as that lora was trained for.
 
 Everything that can be changed is found at the top of the file:
 ```python
@@ -24,7 +24,7 @@ Copy the meta data and make a json file near that lora safetensor and append .js
 
 # trick on how to autogenerate metadata on a directory
 A quick way is to use this extension https://github.com/kohya-ss/sd-webui-additional-networks and modify a function in the metadata_editor.py file
-What you have to modify is:
+What you have to modify is: copy_metadata_to_all function replace the code with this one
 
 ```python
 def copy_metadata_to_all(module, model_path, copy_dir, same_session_only, missing_meta_only, cover_image):
@@ -102,12 +102,14 @@ def copy_metadata_to_all(module, model_path, copy_dir, same_session_only, missin
   return f"Updated {count} models in directory {copy_dir}."
   ```
 After modifying the script restart automatic1111 put all your lora files into automatic1111\extensions\sd-webui-additional-networks\models\Lora
-Go to the additional network tab select one lora and click on Copy Metadata.
-Don't worry it will not mess your lora I have commented the code you don't need to change anything just click the button, after running you should have all the metadata json files generated feed it to the lora_tag_generator and you will have your output.
+Go to the additional network tab select one lora (doesn't matter which it is) and click on Copy Metadata.
+Don't worry it will not mess your lora I have commented the code you don't need to change anything just click the button, after running you should have all the metadata json files generated, feed it to the lora_tag_generator and you will have your output.
 
-# Example
+# example
 I have my lora inside a folder called test sorakaLora_sorakaV1.safetensors.json
+
 ![image](https://user-images.githubusercontent.com/11870227/232308845-7e9ea08f-7eea-4b91-8004-f8521dadffea.png)
+
 The json was generated using the extension and the modified script the json file looks like this
 ```json
 {
@@ -161,10 +163,14 @@ The json was generated using the extension and the modified script the json file
 ```
 
 After running the script we get 2 file:
+
 ![image](https://user-images.githubusercontent.com/11870227/232308928-fa246f96-501a-4e4e-842f-163d70066771.png)
 
 The lora_prompts_generator.txt will have our prompts:
 ```json
 solo, breasts, soraka_classic, looking_at_viewer, blush, smile, sky, star_\(sky\), starry_sky, night, night_sky, space, medium_breasts, ponytail, shooting_star, <lora:sorakaLora_sorakaV1:0.5>
 ```
+
 Of course if you want better results you need to tweak the prompts but this is pretty good starting.
+
+This is not the best example use but generaly the trigger word is always there, also the reason why i filtered 1girl for example because I already have it on my prompts.
