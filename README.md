@@ -176,7 +176,7 @@ solo, breasts, soraka_classic, looking_at_viewer, blush, smile, sky, star_\(sky\
 
 Of course if you want better results you need to tweak the prompts but this is pretty good starting.
 
-This is not the best example use but generaly the trigger word is always there, also the reason why i filtered 1girl for example because I already have it on my prompts.
+This is not the best example use but generaly the trigger word is always there, also the reason why i filtered masterpiece, highres, 1girl because I already have it on my prompts.
 
 # improving
 This script was duct taped using chatgpt as my knowledge in python or NULL I tried to borrow the code from sd-webui-additional-networks to be able to standalone parse the safetensors files but unfortunately I met some walls running the script external.
