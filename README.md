@@ -103,7 +103,9 @@ def copy_metadata_to_all(module, model_path, copy_dir, same_session_only, missin
   ```
 
 After modifying the script restart automatic1111 put all your lora files into automatic1111\extensions\sd-webui-additional-networks\models\Lora
+
 Go to the additional network tab select one lora (doesn't matter which it is) and click on Copy Metadata.
+
 Don't worry it will not mess your lora I have commented the code you don't need to change anything just click the button, after running you should have all the metadata json files generated, feed it to the lora_tag_generator and you will have your output.
 
 # example
