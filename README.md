@@ -167,7 +167,7 @@ After running the script we get 2 file:
 ![image](https://user-images.githubusercontent.com/11870227/232308928-fa246f96-501a-4e4e-842f-163d70066771.png)
 
 The lora_prompts_generator.txt will have our prompts:
-```json
+```
 solo, breasts, soraka_classic, looking_at_viewer, blush, smile, sky, star_\(sky\), starry_sky, night, night_sky, space, medium_breasts, ponytail, shooting_star, <lora:sorakaLora_sorakaV1:0.5>
 ```
 
