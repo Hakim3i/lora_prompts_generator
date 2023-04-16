@@ -177,4 +177,4 @@ This is not the best example use but generaly the trigger word is always there, 
 
 # improving
 This script was duct taped using chatgpt as my knowledge in python or NULL I tried to borrow the code from sd-webui-additional-networks to be able to standalone parse the safetensors files but unfortunately I met some walls running the script external.
-If anyone willing to improve it feel free to do so.
+If anyone willing to improve it feel free to do so, would be even better to make this into an extension.
