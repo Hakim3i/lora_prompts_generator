@@ -109,7 +109,7 @@ Go to the additional network tab select one lora (doesn't matter which it is) an
 Don't worry it will not mess your lora I have commented the code you don't need to change anything just click the button, after running you should have all the metadata json files generated, feed it to the lora_tag_generator and you will have your output.
 
 # example
-I have my lora inside a folder called test sorakaLora_sorakaV1.safetensors.json
+I have my lora inside a folder called test the json file called sorakaLora_sorakaV1.safetensors.json
 
 ![image](https://user-images.githubusercontent.com/11870227/232308845-7e9ea08f-7eea-4b91-8004-f8521dadffea.png)
 
