@@ -101,6 +101,7 @@ def copy_metadata_to_all(module, model_path, copy_dir, same_session_only, missin
   print(f"[MetadataEditor] Updated {count} models in directory {copy_dir}.")
   return f"Updated {count} models in directory {copy_dir}."
   ```
+
 After modifying the script restart automatic1111 put all your lora files into automatic1111\extensions\sd-webui-additional-networks\models\Lora
 Go to the additional network tab select one lora (doesn't matter which it is) and click on Copy Metadata.
 Don't worry it will not mess your lora I have commented the code you don't need to change anything just click the button, after running you should have all the metadata json files generated, feed it to the lora_tag_generator and you will have your output.
@@ -110,7 +111,7 @@ I have my lora inside a folder called test sorakaLora_sorakaV1.safetensors.json
 
 ![image](https://user-images.githubusercontent.com/11870227/232308845-7e9ea08f-7eea-4b91-8004-f8521dadffea.png)
 
-The json was generated using the extension and the modified script the json file looks like this
+The json was generated using the extension with the modified script the json file looks like this
 ```json
 {
   "ss_cache_latents": "True",
